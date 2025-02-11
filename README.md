@@ -12,9 +12,9 @@ npx prisma generate
 # Launching MSSQL DB on docker
 docker compose -f ./docker/docker-compose.yml up -d
 # Migrate the DB
-npx prisma migrate deploy
+npm run migrate
 # Seed the DB
 npx prisma db seed
 # Launching demo and expecting a result
-node index.js
+npm run dev
 ```

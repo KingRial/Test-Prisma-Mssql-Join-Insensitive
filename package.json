@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npx dotenv -e .env.development node index.js",
+    "seed": "npx dotenv -e .env.development node prisma/seed.js",
+    "migrate": "npx dotenv -e .env.development prisma migrate deploy"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "dotenv-cli": "^8.0.0",
     "prisma": "^6.3.1"
   },
   "dependencies": {
