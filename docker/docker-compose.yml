@@ -1,0 +1,13 @@
+name: test-prisma-mssql-join-case-insensitive
+services:
+  test-prisma-mssql:
+    image: prisma/test-prisma-mssql-join-case-insensitive:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      SA_PASSWORD: "Prisma@s3cret"
+      
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
